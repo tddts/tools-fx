@@ -35,11 +35,7 @@ public class NumericFormatStringConverter<T extends Number> extends StringConver
 
   @Override
   public String toString(T object) {
-    // If the specified value is null, return a zero-length String
-    if (object == null) {
-      return "";
-    }
-
+    if (object == null) return "";
     return format.format(object);
   }
 
